@@ -55,5 +55,4 @@ export class CustomersService {
     this.customers.splice(index, 1);
     return true;
   }
-
 }

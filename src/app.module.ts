@@ -1,4 +1,3 @@
-
 import { Module, HttpModule, HttpService } from '@nestjs/common';
 import * as joi from 'joi';
 import { ConfigModule } from '@nestjs/config';
@@ -7,7 +6,6 @@ import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
 import { ProductsModule } from './products/products.module';
 import { DatabaseModule } from './database/database.module';
-
 
 import { enviroments } from './enviroments';
 import config from './config';
@@ -24,7 +22,7 @@ import config from './config';
         API_KEY: joi.number().required(),
         DATABASE_NAME: joi.string().required(),
         DATABASE_PORT: joi.number().required(),
-      })
+      }),
     }),
     HttpModule,
     UsersModule,
